@@ -1,0 +1,66 @@
+.icon span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+@media only screen and (max-width: 567px) {
+
+
+    .single-service-area{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .icon{
+        margin: auto;
+        margin-bottom: 35px;
+    }
+
+    .single-service-area .text{
+        width: 100% !important;
+        margin-left: -50px;         
+    }
+
+    .single-service-area .text p{
+        width: 300px;
+        margin: auto !important;        
+    }
+
+
+    .aboutSite:first-child{
+        margin-left: 0px;
+      }
+      
+      .aboutSite:last-child{
+        margin-right: 0px;
+      }
+
+      .single-service-area2{
+          margin: -140px -60px !important;
+      }
+
+}
+
+.aboutSite{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .aboutSite:first-child{
+    margin-left: 120px;
+  }
+  
+  .aboutSite:last-child{
+    margin-right: 120px;
+  }
+  
+  .single-service-area img{
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: gainsboro 10px 20px 10px 2px;
+  }
