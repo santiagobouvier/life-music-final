@@ -1,6 +1,7 @@
 (function () {
 
   var boton = document.getElementById('play-pause');
+  boton.style.visibility = "hidden";
 
   boton.addEventListener('click', function (boton) {
     boton.target.classList.toggle('mute-style');
@@ -31,10 +32,8 @@
   }
 
   function moveAudioPosition(){
-
      var currentTime = sliderIndex * 4;
      audio.currentTime = currentTime;
-
   }
 
   var $$ = function (selector, context) {
@@ -109,9 +108,20 @@
     function performSliding(slideID) {
       
       sliderIndex = slideID;
-      console.log(artist[slideID]);
-      console.log(audio.currentTime);
-      console.log("-------");
+
+      // --  HidePlayButton ----
+      
+      if (slideID < 2){
+        boton.style.visibility = "hidden";
+      } else if (slideID == ( artist.length - 1)){
+        
+        audio.pause();
+        musicIsPlaying = false;
+        boton.className = "play-style";
+        boton.style.visibility = "hidden";
+      } else {
+        boton.style.visibility = "visible";
+      }
      
       if (sliding) return;
       sliding = true;
